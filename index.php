@@ -2,11 +2,13 @@
 
 
 if (isset($_POST["submit"])) {
-     if (!empty($_POST)) {
+     if (!isset($_POST)) {
            foreach ($_POST["box"] as $wert) {
            echo $wert . ", " ;
            }            
-     }    
+     }  else {
+      echo "Sorry, please check a box";
+     }  
 }
 
  ?>
