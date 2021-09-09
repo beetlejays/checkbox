@@ -1,12 +1,15 @@
 <?php 
-     
-     if(isset($_POST["boxes"])) {
-           foreach($_POST["boxes"] as $box) {
-                 echo $box . "<br>";
-           }
-     }
- ?>
 
+
+if (isset($_POST["submit"])) {
+     if (!empty($_POST)) {
+           foreach ($_POST["box"] as $wert) {
+           echo $wert . ", " ;
+           }            
+     }    
+}
+
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,13 +20,19 @@
       <title>Document</title>
 </head>
 <body>
-<form action="" method="post">
-<label for="one">One</label>      
-<input type="checkbox" value="one" name="boxes[]" id="one">
-<label for="two">Two</label>      
-<input type="checkbox" value="two" name="boxes[]" id="two"><br><br>
-<input type="submit" value="submit">
-</form>
       
+<form action="#" method="post">
+      <label for="one">One</label>
+      <input type="checkbox" for="one" value="one" name="box[]">
+      <label for="two">Two</label>
+      <input type="checkbox" for="two" value="two" name="box[]">
+      <label for="three">Three</label>
+      <input type="checkbox" for="three" value="three" name="box[]">
+      <input type="submit" value="submit now" name="submit">
+</form>
+
+
+
+
 </body>
 </html>
